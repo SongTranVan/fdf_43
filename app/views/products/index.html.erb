@@ -1,20 +1,31 @@
 <%= provide :title, t(".title") %>
-<h1><%= t ".header" %></h1>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class="panel">
       <%= form_tag products_path, method: :get, remote: true, class:"panel-body form-group" do %>
-        <%= select_tag :types, options_for_select(@products.product_types), {include_blank: t(".all"), class: "form-input"} %>
-        <%= select_tag :category_id, options_for_select(@categories.collect{|u| [u.name, u.id]}), {multiple: true, include_blank: t(".all"), size: 3, class: "form-input"} %>
-        <%= select_tag :order_by, options_for_select([[t(".name"), :name],[t(".created"), :created_at],[t(".price"), :price]]), {class: "form-input"} %>
-
+        <%= select_tag :types, select_product_type, {include_blank: t(".all"), class: "form-input"} %>
+        <%= select_tag :category_id, select_category,
+          {multiple: true, include_blank: t(".all"), size: 3, class: "form-input"} %>
+        <%= select_tag :order_by, select_type_filter, {class: "form-input"} %>
         <%= submit_tag t(".filter"), class:"btn btn-info" %>
       <% end %>
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row products">
-    <%= render @products %>
+<body class="index">
+  <div class="center">
+    <h1 class="home"><%= t "static_pages.home.header1" %></h1>
+    <h2 class="home">
+      <%= t "static_pages.home.header2" %>
+    </h2>
+    <p class="bt_position"><%= link_to t(".signup_link"), signup_path, class: "btn btn-lg btn-outline-danger" %></p>
   </div>
-</div>
+  <div class="products-list">
+    <h2 class="h2-index"><%= t ".header" %></h2>
+    <div class="container">
+      <div class="row products">
+        <%= render @products %>
+      </div>
+    </div>
+  </div>
+</body>

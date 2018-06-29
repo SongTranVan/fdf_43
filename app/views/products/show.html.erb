@@ -1,5 +1,4 @@
 <% provide :title, @product.name %>
-
 <div class="container">
   <div class="card">
     <div class="container-fluid">
@@ -24,13 +23,14 @@
           <h3 class="product-title"><%= @product.name %></h3>
           <div class="rating">
             <div class="stars">
-              <span class="glyphicon glyphicon-star checked"></span>
-              <span class="glyphicon glyphicon-star checked"></span>
-              <span class="glyphicon glyphicon-star checked"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
+              <% @product.avg_rate.to_i.times do %>
+              <span class="fa fa-star checked"></span>
+              <% end %>
+              <% (Settings.max_point - @product.avg_rate.to_i).times do %>
+              <span class="fa fa-star"></span>
+              <% end %>
             </div>
-            <span class="review-no"></span>
+            <%= render "rate_point" %>
           </div>
           <h5 class="product-description"><%= @product.description %></h5>
           <h4 class="price"><%= t ".price_text" %>
@@ -58,6 +58,15 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="rating-panel">
+  <%= render "rates/rate_form" %>
+  <div class="rate-details">
+    <h4 class="review-text"><%= t ".all_reviews_text" %></h4>
+    <div class="all-rates">
+      <%= render @rates %>
     </div>
   </div>
 </div>

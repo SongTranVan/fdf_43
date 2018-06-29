@@ -6,8 +6,8 @@ class CreateProducts < ActiveRecord::Migration[5.1]
       t.integer :prince
       t.integer :inventory
       t.string :type
-      t.float :avg_rate
-      t.integer :count_rate
+      t.float :avg_rate, default: 5
+      t.integer :count_rate, default: 1
       t.references :category, foreign_key: true
 
       t.timestamps

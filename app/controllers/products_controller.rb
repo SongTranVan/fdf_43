@@ -12,7 +12,9 @@ class ProductsController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    @rates = @product.rates
+  end
 
   private
 

@@ -140,11 +140,13 @@ en:
         success: "User has been destroyed"
         warning: "Failed to destroy this user"
   products:
+    rating: "Rating: %{point}"
     alt-text: Product Image"
     product_not_found: "Product not found!"
     index:
-      title: "Products"
-      header: "Products"
+      title: "Home"
+      header: "Our Products"
+      signup_link: "Sign up now!"
       product_id_text: "Product ID"
       product_name_text: "Product Name"
       product_unit_price_text: "Unit Price"
@@ -161,6 +163,13 @@ en:
       price_text: "current price: "
       quantity_text: "quantity: "
       edit_link: "Edit"
+      user_name_text: "User name"
+      point_text: "Point"
+      comment_text: "Comment"
+      your_comment_text: "Your comment"
+      your_comment_holder: "Your comment ..."
+      comment: "Comment"
+      all_reviews_text: "All Reviews"
   product_price: "$%{price}"
   sessions:
     new:
@@ -296,3 +305,7 @@ en:
       user_name_text: "User Name"
       product_name_text: "Product Name"
       status_text: "Status"
+  rates:
+    your_rate_text: "Your Rating: "
+    product_not_found: "Error! Product not exist or has been deleted!"
+

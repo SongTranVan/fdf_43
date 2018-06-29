@@ -8,6 +8,11 @@ default_category: 1
 zero_value: 0
 cart_value: 0
 one_value: 1
+two: 2
+one: 1
+three: 3
+four: 4
+five: 5
 total: 0
 time_expire: 2
 user:
@@ -37,4 +42,4 @@ suggestion:
 food: "food"
 drink: "drink"
 rows: 10
-
+max_point: 5

@@ -31,4 +31,10 @@ class Product < ApplicationRecord
     number = inventory + quantity
     update_attributes inventory: number
   end
+
+  def update_avg_rate new_point
+    self.avg_rate = (((avg_rate * count_rate) + new_point) / (count_rate + Settings.one)).round(Settings.two)
+    self.count_rate += Settings.one_value
+    save
+  end
 end

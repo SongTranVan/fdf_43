@@ -32,6 +32,13 @@ body.home {
   background-size: cover;
 }
 
+body.index {
+  background-image: url("background_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 section {
   overflow: auto;
 }
@@ -88,6 +95,17 @@ h2.home {
   color: white;
 }
 
+.h2-index {
+  color: white;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.products-list {
+  padding-top: 150px;
+}
+
 p {
   font-size: 15px;
   line-height: 25px;
@@ -116,7 +134,7 @@ p {
   clear: both;
   float: left;
   width: 100%;
-  margin-top: 180px;
+  margin-top: 300px;
   margin-bottom: 70px;
   @include box_sizing;
 }
@@ -176,7 +194,7 @@ input {
 }
 
 .bt_position {
-  margin-left: 45px;
+  margin-left: 40px;
 }
 
 .checkbox {
@@ -444,4 +462,51 @@ h3.text-align-center {
 .status-color {
   color: red;
   font-weight: bold;
+}
+
+.rating-panel {
+  width: 500px;
+  padding-top: 75px;
+  padding-left: 16px;
+}
+
+.rate-text {
+  font-weight: bold;
+  color: red;
+  font-size: 20px;
+}
+
+.comment-panel {
+  padding-top: 30px;
+}
+
+.rate-details {
+  width: 500px;
+  padding-left: 16px;
+  position: relative;
+  margin-left: 600px;
+  margin-top: -280px;
+}
+
+.review-text {
+  color: red;
+  font-weight: bold;
+}
+
+.star-style {
+  float: right;
+  color: blue;
+}
+
+.rate-user {
+  font-size: 16px;
+}
+
+.rate-date {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.comment-size {
+  padding-left: 5px;
 }

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :orders
   resources :carts, except: %i(new show edit)
   resources :suggestions
+  resources :rates
 
   resources :products, only: %i(index show)
   resources :products do

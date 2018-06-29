@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(version: 20180622074730) do
     t.float "price", limit: 24
     t.integer "inventory"
     t.integer "product_type", default: 0
-    t.float "avg_rate", limit: 24
-    t.integer "count_rate"
+    t.float "avg_rate", limit: 24, default: 5.0
+    t.integer "count_rate", default: 1
     t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

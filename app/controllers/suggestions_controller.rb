@@ -19,8 +19,8 @@ class SuggestionsController < ApplicationController
   def show; end
 
   def index
-    @suggestions = Suggestion.paginate(page: params[:page],
-    per_page: Settings.per_page_value).newest
+    @suggestions = Suggestion.newest.paginate(page: params[:page],
+    per_page: Settings.per_page_value)
   end
 
   def update

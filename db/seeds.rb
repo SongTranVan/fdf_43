@@ -37,15 +37,18 @@ end
   Category.create!(name: "cate#{n}")
 end
 
+r = Random.new
+
 10.times do |n|
   name = "Product#{n+1}"
   description = "AAA#{n}"
-  price = 10
+  price = r.rand(5..30)
   quantity = 10
   Product.create!(name: name,
     description: description,
     price: price,
     inventory: quantity,
+    avg_rate: r.rand(1..5),
     category_id: 1)
 end
 
